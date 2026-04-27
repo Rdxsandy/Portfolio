@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent: 37 99 235;
+    --background: 255 255 255;
+    --foreground: 10 10 10;
+    --card: 245 245 245;
+    --muted: 115 115 115;
+    --border: 0 0 0;
+  }
+
+  .dark {
+    --accent: 59 130 246;
+    --background: 10 10 10;
+    --foreground: 255 255 255;
+    --card: 23 23 23;
+    --muted: 163 163 163;
+    --border: 255 255 255;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
